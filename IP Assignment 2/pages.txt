@@ -1,0 +1,10 @@
+URL00, 0.5: This is page zero, and has references to URL01, URL09, and also to URL08. It may have repeated references - so there are two references to URL09.
+URL01, 0.6: This is page one, and has references to URL02, URL03, and also to URL04. It may have repeated references - so there are two references to URL04.
+URL02, 0.6: This is another page (page is represented as a line in this). This has reference to URL05, URL04, and URL00
+URL03, 0.7: This page contains information about a product and references URL01 and URL02 for related information.
+URL04, 0.8: This page is a blog post and has links to URL05 and URL06 for further reading.
+URL05, 0.9: This page is a research paper and cites URL07 and URL08 as sources.
+URL06, 0.5: This page is a news article and references URL08 and URL09 for more information.
+URL07, 0.6: This page is a forum discussion and mentions URL02 and URL03 as related topics.
+URL08, 0.7: This page is a tutorial and links to URL01 and URL04 for additional resources.
+URL09, 0.8: This page is a product review and references URL05 and URL09 for further information.

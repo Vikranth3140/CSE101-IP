@@ -1,0 +1,19 @@
+John:
+Michael, 1
+Sarah, 0
+David, 1
+
+Michael:
+John, 1
+Sarah, 1
+David, 1
+
+Sarah:
+John, 1
+Michael, 1
+David, 1
+
+David:
+John, 0
+Michael, 0
+Sarah, 0
