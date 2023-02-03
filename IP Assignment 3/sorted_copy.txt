@@ -1,0 +1,10 @@
+TA, Crossing, Gate number, Time
+Sahil Goyal, ENTER, 3, 00:00:01
+Bhavya Jain, EXIT, 5, 00:00:04
+Thanmayee Matha, ENTER, 1, 00:00:05
+Khushdev Pandit, ENTER, 5, 00:00:17
+Khushdev Pandit, EXIT, 1, 00:00:20
+Khushdev Pandit, ENTER, 1, 00:00:45
+Rohan Dhar, EXIT, 1, 00:00:50
+Khushdev Pandit, EXIT, 1, 00:00:51
+Bharat Goyal, EXIT, 1, 00:00:59

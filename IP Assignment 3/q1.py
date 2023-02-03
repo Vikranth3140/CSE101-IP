@@ -1,43 +1,27 @@
-def printn(num):
-    if (num == 0):
-        return
-    print("*", end = " ")
+n = int(input())
+z = n
 
-    printn(num - 1)
+def upper(n):
+    if n == 0:
+        pass
+    else:
+        if n != z:
+            print(n*'* ' + (4*(z-n))*' ' + (n)*'* ')
+        else:
+            print(n*'* ' + (4*(z-n)-4)*' ' + (n)*'* ')
+        n = n-1
+        upper(n)
 
-def pattern_1(n, i):
-    if (n == 0):
-        return
-    printn(i)
-    print("\n", end = "")
+def lower(n):
+    if n == 0:
+        pass
+    else:
+        if z != n:
+            if z - n != 1:
+                print((z-n)*'* ' + (4*(n))*' ' + (z-n)*'* ')
+        n = n-1
+        lower(n)
 
-    pattern_1(n - 1, i + 1)
-
-def print_space(space):
-    if (space == 0):
-        return
-    print(" ", end=" ")
-
-    print_space(space - 1)
-
-def print_asterisk(asterisk):
-    if (asterisk == 0):
-        return  
-
-    print("*", end =" ")
-
-    print_asterisk(asterisk - 1)
-
-def pattern(n, num):
-    if (n == 0):
-        return
-
-    print_space(n - 1)
-    print_asterisk(num - n + 1)
-    print()
-    pattern(n - 1, num)
-
-if __name__ == '__main__':
-    n = int(input('Enter n'))
-    pattern_1(n, 1)
-    pattern(n, n)
+upper(n)
+lower(n)
+print(n*'* ' + (4*(z-n))*' ' + n*'* ')
