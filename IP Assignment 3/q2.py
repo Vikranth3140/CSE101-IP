@@ -36,7 +36,7 @@ for i in temp_list:
             dict[i[0]]=temp_list
 
 def student_details(stud_name,time):
-    f=open("student_details","w")
+    f=open("student_details.txt","w")
     try:
         tim_list = []
         for i,j in dict.items():
@@ -67,7 +67,7 @@ def student_details(stud_name,time):
     f.close()
 
 def timing(start_tim,end_tim):
-    f=open("student_details","w")
+    f=open("student_details.txt","w")
     for i,j in dict.items():
         for k in j:
             if start_tim <= k['Time'] and k['Time']<= end_tim:

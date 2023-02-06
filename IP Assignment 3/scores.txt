@@ -1,0 +1,10 @@
+file1.txt
+Score : 9.18
+The 5 most words being printed is : ['no', 'Vik', 'This', 'gucci', 'mango']
+Random 5 words are : ('okkkk', 'mango', 'gfvdci', 'mango', 'Hello')
+
+file2.txt
+Score : 10.35
+The 5 most words being printed is : ['nananaaaa', 'Vik', 'This', 'mango', 'banana']
+Random 5 words are : ('gfvdci', 'But', 'mango', 'But', 'banana')
+

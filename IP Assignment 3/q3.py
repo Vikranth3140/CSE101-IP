@@ -1,13 +1,26 @@
+import random
+
 n = int(input())
 def open_file(n):
     global input_line
     global file_name
+    f=open("scores.txt","w")
     for i in range(n):
         file_name = input()
         with open(file_name) as input_file:
             input_line = input_file.read()
             print('The input line is :',input_line)
             print()
+            net_grade =(round(( 4 + f1()*6 + (f2()[0])*6 - f3() - f4() - f5()),2))
+            print('Net Grade :', net_grade)      
+            f.write(file_name)
+            f.write('\n')
+            f.write('Score : ' + str(net_grade))
+            f.write('\n')
+            f.write('The 5 most words being printed is : ' + str((f2()[1])))
+            f.write('\n')
+            f.write('Random 5 words are : ' + str(random_5()))
+            f.write('\n\n')
 
 def f1():
     global unique_word_list
@@ -48,10 +61,13 @@ def f2():
     count_5_most_used = 0
     count_dict = sorted(d.items(), key=lambda x:x[1],reverse = True)
 
+    most_5 = []
     for i in range(5):
         count_5_most_used += count_dict[i][1]
+        most_5.append(count_dict[i][0])
+        most_5.reverse()
     f2_grade = count_5_most_used / count_total
-    return f2_grade
+    return f2_grade,most_5
 
 def f3():
     sentences_list = []
@@ -90,7 +106,6 @@ def f4():
             list1.append(i)
             count += 1
     f4_grade = count / len(input_line.split(' '))
-
     return f4_grade
 
 def f5():
@@ -106,20 +121,18 @@ def f5():
     else:
         return 0
 
+def random_5():
+    random_word1 = random.choice(unique_word_list)
+    random_word2 = random.choice(unique_word_list)
+    random_word3 = random.choice(unique_word_list)
+    random_word4 = random.choice(unique_word_list)
+    random_word5 = random.choice(unique_word_list)
+    return random_word1,random_word2,random_word3,random_word4,random_word5
+
 open_file(n)
 # print('f1 Grade :',f1())
-# print('f2 Grade :',f2())
+# print('f2 Grade :',f2()[0])
 # print('f3 Grade :',f3())
 # print('f4 Grade :',f4())
 # print('f5 Grade :',f5())
 # print()
-
-net_grade =(round(( 4 + f1()*6 + f2()*6 - f3() - f4() - f5()),2))
-print('Net Grade :', net_grade)
-
-f=open("scores","w")
-
-f.write(file_name)
-f.write('\n')
-f.write('Score : ' + str(net_grade))
-f.write('\n')
