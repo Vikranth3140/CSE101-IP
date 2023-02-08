@@ -93,6 +93,7 @@ for i in range(len(policy)):
         if abs(policy[i] - j) <= 2:
             temp_list.append(j)
     list_less_2.append(temp_list)
+    temp_list.sort(reverse=True)
     if temp_list == []:
         pass
     else:
@@ -102,7 +103,9 @@ for i in range(len(policy)):
         if diff == []:
             pass
         else:
-            policy[i] = (temp_list[diff.index(max(diff))] + temp_list[diff.index(max(diff))+1])/2
+            policy[i] = round((temp_list[diff.index(max(diff))] + temp_list[diff.index(max(diff))+1]),2)/2
+for i in range(len(list_less_2)):
+    list_less_2[i] = sorted(list_less_2[i],reverse = True)
 
 def student_details():
     print('Course Name :',course_name)
@@ -118,10 +121,20 @@ def show_grd():
         f.write('\n')
 
 def search_stud(roll_no):
+    bool1 = True
+    for k in d.keys():
+        if int(k) == int(roll_no):
+            print('The Marks :',d[k])
     for i,j in zip(dict_grade.items(),dict_percentage.items()):
         if int(i[0]) == roll_no and int(j[0]) == roll_no:
             print('The Grade :',i[1])
             print('The Percentage :',j[1])
+            bool1 = True
+            break
+        else:
+            bool1 = False
+    if bool1 == False:
+        print('Student with that Roll No not found')
 
 def main():
     global course_name
@@ -146,5 +159,3 @@ def main():
         else:
             print('Enter another choice')
 main()
-
-print(policy)

@@ -1,4 +1,4 @@
 file1.txt
-Score : 8.29
+Score : 8.1
 The 5 most words being printed is : ['campus', 'and', 'the', 'a', 'of']
-Random 5 words are : ('in', 'well', 'similar', 'loop', 'into')
+Random 5 words are : ('or', 'type', 'be', 'as', 'this')

@@ -33,7 +33,7 @@ def f1():
     unique_word_list = []
     for i in input_line.split(' '):
         if i not in unique_word_list:
-            unique_word_list.append(i.strip(':;,.'))
+            unique_word_list.append(i.strip(':;,.()[]/?'))
     unique_word_list_actual = []
     for i in unique_word_list:
         x=i.lower()
