@@ -6,11 +6,17 @@ def open_file(n):
     global file_name
     f=open("scores.txt","w")
     for i in range(n):
-        file_name = input()
+        file_name = input('Enter the filename : ')
         with open(file_name) as input_file:
-            input_line = input_file.read()
-            print('The input line is :',input_line)
-            print()
+            input_file = input_file.read()
+            input_line = ''
+            for i in input_file:
+                if i == '\n':
+                    input_line += ' '
+                else:
+                    input_line += i
+            # print('The input line is :',input_line)
+            # print()
             net_grade =(round(( 4 + f1()*6 + (f2()[0])*6 - f3() - f4() - f5()),2))
             print('Net Grade :', net_grade)      
             f.write(file_name)
@@ -20,7 +26,7 @@ def open_file(n):
             f.write('The 5 most words being printed is : ' + str((f2()[1])))
             f.write('\n')
             f.write('Random 5 words are : ' + str(random_5()))
-            f.write('\n\n')
+            f.write('\n')
 
 def f1():
     global unique_word_list
@@ -28,13 +34,11 @@ def f1():
     for i in input_line.split(' '):
         if i not in unique_word_list:
             unique_word_list.append(i.strip(':;,.'))
-
     unique_word_list_actual = []
     for i in unique_word_list:
         x=i.lower()
         if x not in unique_word_list_actual:
             unique_word_list_actual.append(x)
-
     count_unique = len(unique_word_list_actual)
     count_total = len(input_line.split(' '))
     f1_grade = count_unique / count_total
@@ -56,7 +60,6 @@ def f2():
             if j == i:
                 count += 1
         d[i] = count
-
     count_total = len(input_line.split(' '))
     count_5_most_used = 0
     count_dict = sorted(d.items(), key=lambda x:x[1],reverse = True)
@@ -72,7 +75,6 @@ def f2():
 def f3():
     sentences_list = []
     sentence_count = 0
-
     for i in input_line.split('. '):
         sentences_list.append(i)
         sentence_count += 1
@@ -80,7 +82,6 @@ def f3():
     for i in range(sentence_count):
         if len(sentences_list[i].split(' ')) > 35 or len(sentences_list[i].split(' ')) < 5:
             sentence_in_range_count += 1
-
     f3_grade = sentence_in_range_count / sentence_count
     return f3_grade
 
@@ -102,7 +103,7 @@ def f4():
     list1=[]
     count = 0
     for i in unique_word_list:
-        if i[-2] in ':;,.':
+        if ':;,. ' in i:
             list1.append(i)
             count += 1
     f4_grade = count / len(input_line.split(' '))
@@ -115,7 +116,6 @@ def f5():
             unique_word_list.append(i)
     count_unique = len(unique_word_list)
     count_total = len(input_line.split(' '))
-
     if count_total > 750:
         return 1
     else:
@@ -128,11 +128,4 @@ def random_5():
     random_word4 = random.choice(unique_word_list)
     random_word5 = random.choice(unique_word_list)
     return random_word1,random_word2,random_word3,random_word4,random_word5
-
 open_file(n)
-# print('f1 Grade :',f1())
-# print('f2 Grade :',f2()[0])
-# print('f3 Grade :',f3())
-# print('f4 Grade :',f4())
-# print('f5 Grade :',f5())
-# print()

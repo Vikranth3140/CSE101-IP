@@ -1,2 +1,4 @@
-mango banana::: gucci,,, gucci. This is Vik. Hello,, no mango;;;; gucci. This... This This Vik no gucci.
-mango banana nananaaaa::: gfvdci,,, gfvbgbgbgbggbi. Hiiiiiiiiiiii. This is Vik. Hello,, no mango;;;; gucci. This... This This Vik..... But okkkk;;...
+Convert this data into a nested dictionary. The keys should be the name and value should be another dictionary containing a list of gate no, crossing type, time. Use this dictionary to answer the following queries (for querying, you can write a small loop and ask for a number between 1 and 3 - nothing given can be the end).
+Given a student name (as input), show the record of students moving in/out of campus (as a list of tuples) in the day (in a output text file), and whether currently present in campus or not.  Take another input for current time as well.
+Given the start time and the end time (in 24hr format, both inclusive) as input, determine all the students who entered the campus during this, and all students who exited the campus during this time. Save the result into an output text file, with the format similar as the input data file.
+Given the gate number (as input), determine the number of times students have entered the campus through that gate, and the number of times students have exited the campus from that gate.

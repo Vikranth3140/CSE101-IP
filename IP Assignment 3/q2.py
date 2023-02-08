@@ -61,7 +61,6 @@ def student_details(stud_name,time):
             print('The student has not entered or exited the campus')
     for i,j in dict.items():
         if i == stud_name:
-            f.write()
             f.write(str(j) + '\n')
             f.write('\n')
     f.close()
@@ -109,5 +108,4 @@ def main():
             break
         else:
             print('Invalid input')
-
 main()
