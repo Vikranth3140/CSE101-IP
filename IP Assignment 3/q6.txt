@@ -1,15 +1,15 @@
 Advantages of using OO
 1. Debugging is easier
-2.Code can be reused easily
+2.  Code can be reused easily
 Advantages of using Dictionaries
 1. Store value is easier and reading is efficient
-2. searching is fast
+2. Searching is fast
 Disadvantage of using OO
-1. length of programs is larger
-2. OOps take taime to learn
+1. Length of programs is longer
+2. OOPS take taime to learn
 Disadvantage of using dictionaries
-1. they are unordered
-2. they take more space
+1. They are unordered
+2. They take more space
 Performance comparison for grading operation (give in each line: value of N; time taken by two
 approaches in seconds, and which is faster and by how much).
 1. N: 10000
