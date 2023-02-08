@@ -1,4 +1,4 @@
 file1.txt
 Score : 8.29
 The 5 most words being printed is : ['campus', 'and', 'the', 'a', 'of']
-Random 5 words are : ('in/out', 'of', 'to', 'crossing', 'Given')
+Random 5 words are : ('in', 'well', 'similar', 'loop', 'into')

@@ -122,10 +122,15 @@ def f5():
         return 0
 
 def random_5():
-    random_word1 = random.choice(unique_word_list)
-    random_word2 = random.choice(unique_word_list)
-    random_word3 = random.choice(unique_word_list)
-    random_word4 = random.choice(unique_word_list)
-    random_word5 = random.choice(unique_word_list)
+    temp_lst = []
+    print(unique_word_list)
+    for i in unique_word_list:
+        if i != '':
+            temp_lst.append(i)
+    random_word1 = random.choice(temp_lst)
+    random_word2 = random.choice(temp_lst)
+    random_word3 = random.choice(temp_lst)
+    random_word4 = random.choice(temp_lst)
+    random_word5 = random.choice(temp_lst)
     return random_word1,random_word2,random_word3,random_word4,random_word5
 open_file(n)
