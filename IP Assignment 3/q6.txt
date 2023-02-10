@@ -14,16 +14,14 @@ Disadvantage of using dictionaries
 1. They are unordered
 2. They take more space
 
-Performance comparison for grading operation (give in each line: value of N; time taken by two
-approaches in seconds, and which is faster and by how much).
+Performance comparison for grading operation (give in each line: value of N; time taken by two approaches in seconds, and which is faster and by how much).
 1. N: 10000
-2. Time by OO: 0.0672542492357
-3. Time by dictionary: 0.7234628625
-4. X is faster; fraction of time x took is:0.002346238425
+2. Time by OO: 0.0400120520754
+3. Time by dictionary: 0.0180029385736
+4. X is faster; fraction of time x took is: 0.00234502i54879
 
-Performance comparison for search operation (give in each line: value of N; time taken by two
-approaches in seconds, and which is faster and by how much).
-1. N: 10
-2. Time by OO: 0.00275y87254234
-3. Time by dictionary: 0.004234235235
-4. X is faster; fraction of time x took is:0.002342452352
+Performance comparison for search operation (give in each line: value of N; time taken by two approaches in seconds, and which is faster and by how much).
+1. N:10
+2. Time by OO: 0.0007426738739013672
+3. Time by dictionary: 0.0005299049377883950
+4. X is faster; fraction of time x took is: 0.00230549900395
