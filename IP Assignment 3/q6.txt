@@ -16,12 +16,12 @@ Disadvantage of using dictionaries
 
 Performance comparison for grading operation (give in each line: value of N; time taken by two approaches in seconds, and which is faster and by how much).
 1. N: 10000
-2. Time by OO: 0.0400120520754
-3. Time by dictionary: 0.0180029385736
+2. Time by OO: 0.039673566818237305
+3. Time by dictionary: 0.0017385482788085938
 4. X is faster; fraction of time x took is: 0.00234502i54879
 
 Performance comparison for search operation (give in each line: value of N; time taken by two approaches in seconds, and which is faster and by how much).
 1. N:10
 2. Time by OO: 0.0007426738739013672
-3. Time by dictionary: 0.0005299049377883950
+3. Time by dictionary: 0.0009975433349609375
 4. X is faster; fraction of time x took is: 0.00230549900395
