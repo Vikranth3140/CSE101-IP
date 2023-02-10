@@ -171,6 +171,6 @@ def main():
         else:
             print('Enter another choice')
 
-    print('N1:'count1)
-    print('N2:'count2)
+    print('N1:',count1)
+    print('N2:',count2)
 main()
