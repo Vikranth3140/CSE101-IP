@@ -69,7 +69,6 @@ class Course:
 
     def dict(self):
         grade_list1 = []
-        print(self.total_list)
         for i in self.total_list:
             grd = self.grade(i)
             grade_list1.append(grd)
@@ -100,7 +99,6 @@ class Course:
                     temp_list.append(j)
             list_less_2.append(temp_list)
             temp_list.sort(reverse=True)
-            print(temp_list)
             if temp_list == []:
                 pass
             else:
@@ -162,7 +160,6 @@ course_class.tot_list()
 percentage,grade = course_class.dict()
 new_policy = course_class.cutoff()
 count = course_class.grd_updation()
-print(new_policy)
 def main():
     b = Student(count,policy,percentage,grade,dictionary)
     print("1. Generate summary of the course")
