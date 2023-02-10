@@ -141,6 +141,8 @@ def search_stud(roll_no):
 def main():
     global course_name
     global credits
+    count1 = 0
+    count2 = 0
     course_name = input('Enter Course Name : ')
     credits = int(input('Enter Credits : '))
     print("1. Generate summary of the course")
@@ -155,15 +157,20 @@ def main():
             show_grd()
             end = time.time()
             print(end-start)
+            count1 += 1
         elif ch == '3':
             roll_no = int(input("Enter Roll No. : "))
             start = time.time()
             search_stud(roll_no)
             end = time.time()
             print(end - start)
+            count2 += 1
         elif ch == '':
             print('Thank You!!!')
             break
         else:
             print('Enter another choice')
+
+    print('N1:'count1)
+    print('N2:'count2)
 main()
