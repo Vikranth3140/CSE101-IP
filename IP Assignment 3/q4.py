@@ -1,8 +1,9 @@
+import time
+
 with open('q4_5.txt') as file:
     read_file = file.read().splitlines()
 
 wts = [("labs", 30),("midsem", 15),("assignments", 30),("endsem", 25)]
-
 
 policy = [80,65,50,40]
 

@@ -1,3 +1,5 @@
+import time
+
 def opening_file(file):
     with open(file) as file:
         read_file = file.read().splitlines()
@@ -149,10 +151,16 @@ def main():
         if ch == '1':
             student_details()
         elif ch == '2':
+            start = time.time()
             show_grd()
+            end = time.time()
+            print(end-start)
         elif ch == '3':
             roll_no = int(input("Enter Roll No. : "))
+            start = time.time()
             search_stud(roll_no)
+            end = time.time()
+            print(end - start)
         elif ch == '':
             print('Thank You!!!')
             break
