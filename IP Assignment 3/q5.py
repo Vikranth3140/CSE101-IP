@@ -173,4 +173,5 @@ def main():
 
     print('N1:',count1)
     print('N2:',count2)
+
 main()

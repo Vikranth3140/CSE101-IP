@@ -161,6 +161,7 @@ course_class.tot_list()
 percentage,grade = course_class.dict()
 new_policy = course_class.cutoff()
 count = course_class.grd_updation()
+
 def main():
     b = Student(count,policy,percentage,grade,dictionary)
     print("1. Generate summary of the course")
@@ -180,4 +181,5 @@ def main():
             break
         else:
             print('Enter another choice')
+
 main()
